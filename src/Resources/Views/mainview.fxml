@@ -1,12 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.geometry.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.paint.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
 
-<StackPane prefWidth="231.0" xmlns:fx="http://javafx.com/fxml" fx:controller="Controllers.MainViewController">
 
+<StackPane prefWidth="231.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.MainViewController">
+   <children>
+      <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="532.0">
+         <children>
+            <ListView fx:id="mainList" layoutX="39.0" layoutY="106.0" prefHeight="369.0" prefWidth="455.0" />
+            <Button fx:id="DisplayStudentBTN" layoutX="38.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#Display" prefHeight="30.0" prefWidth="130.0" text="Display Students" />
+            <Button fx:id="AddStudentBTN" layoutX="38.0" layoutY="63.0" mnemonicParsing="false" onMouseClicked="#AddStudent" prefHeight="30.0" prefWidth="130.0" text="Add Student" />
+            <Button fx:id="DisplayTeachersBTN" layoutX="203.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#Display" prefHeight="30.0" prefWidth="130.0" text="Display Teachers" />
+            <Button fx:id="ShowReportsBTN" layoutX="204.0" layoutY="63.0" mnemonicParsing="false" onMouseClicked="#Display" prefHeight="30.0" prefWidth="130.0" text="Display reports" />
+            <Button fx:id="SaveRepotsBTN" layoutX="365.0" layoutY="63.0" mnemonicParsing="false" onMouseClicked="#SaveReports" prefHeight="30.0" prefWidth="130.0" text="Save Reports" />
+         </children>
+      </AnchorPane>
+   </children>
 </StackPane>

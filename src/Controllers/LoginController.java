@@ -12,37 +12,44 @@ import java.io.IOException;
 /**
  * Controls the login screen
  */
-public class LoginController {
-    University u= University.getInstance();
+public class LoginController extends MainController {
     @FXML
     private TextField UsernameTextfield;
 
     @FXML
     private TextField PasswordTextfield;
 
-    public LoginController() throws IOException {
-    }
 
-    public void login(MouseEvent mouseEvent) {
+
+
+    public void login(MouseEvent mouseEvent) throws IOException {
        boolean auth= authenticateUser();
        if (!auth)
        {
            UsernameTextfield.setStyle("-fx-text-fill: red; -fx-font-size: 16px;");
            PasswordTextfield.setStyle("-fx-text-fill: red; -fx-font-size: 16px;");
-       };
+       }
+       else{
+           UsernameTextfield.setStyle("-fx-text-fill: green; -fx-font-size: 16px;");
+           PasswordTextfield.setStyle("-fx-text-fill: green; -fx-font-size: 16px;");
+           SwitchScene("mainview");
+        }
 
     }
     private boolean authenticateUser(){
         String username= UsernameTextfield.getText();
         String password= PasswordTextfield.getText();
-        for (User user : u.Users)
+        for (User user : dataInstance.Users)
         {
             if (user.getUsername().equals(username)){
                 if(user.getPassword().equals(password)){
+                    assignUser(user);
                     return true;
                 }
             }
         }
         return false;
     }
+
+
 }

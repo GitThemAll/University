@@ -5,18 +5,13 @@ import java.time.LocalDate;
 import java.util.*;
 
 public class University {
-    private static University UniversityInstance= null;
     public List<User> Users =new ArrayList();
     public List<Group> Groups =new ArrayList();
-    private University() throws IOException {
+    public University() throws IOException {
         fillDummyData();
     }
 
-    public static University getInstance() throws IOException {
-        if (UniversityInstance == null)
-            UniversityInstance = new University();
-        return UniversityInstance;
-    }
+
     @Override
     public String toString() {
         return "University{" +
