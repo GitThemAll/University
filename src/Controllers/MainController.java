@@ -5,6 +5,9 @@ import Models.User;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.layout.VBox;
+import javafx.scene.text.Text;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -30,10 +33,14 @@ public class MainController {
 
         if (currentUser!=null)
             controller.assignUser(currentUser);
+        controller.setAccess();
         Scene scene = new Scene(root);
         mainWindow.setScene(scene);
         mainWindow.setTitle(sceneName);
         mainWindow.show();
+    }
+
+    protected void setAccess() {
     }
 
 
@@ -45,4 +52,5 @@ public class MainController {
         this.currentUser=u;
         this.userRole=u.getClass().getName().split("\\.")[1];
     }
+
 }

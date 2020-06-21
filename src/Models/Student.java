@@ -9,11 +9,23 @@ import java.util.HashMap;
 
 public class Student extends User{
 
-    private HashMap<String, Double> scores = new java.util.HashMap<String, Double>();
+    public HashMap<String, Double> scores = new java.util.HashMap<String, Double>();
     public Student(String firstname, String lastname, LocalDate birthDate, String username, String password) throws IOException {
         super(firstname, lastname, birthDate, username, password);
         fillScores();
     }
+
+    @Override
+    public String toString() {
+        return ("User{" +
+                "Id=" + this.getId() +
+                ", Firstname='" + this.getFirstname() + '\'' +
+                ", Lastname='" + this.getLastname() + '\'' +
+                ", BirthDate=" + this.getBirthDate() +
+                ", Username='" + this.getUsername() + '\'' +
+                ", Age=" + this.getAge());
+    }
+
 
     private void fillScores() throws IOException {
         String filePath= String.format("%s/src/Models/subjects.txt",Paths.get(".").toAbsolutePath().normalize().toString()) ;
