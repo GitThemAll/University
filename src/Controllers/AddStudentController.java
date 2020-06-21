@@ -50,6 +50,7 @@ public class AddStudentController extends MainController{
         }
         catch (Exception e ){
           this.UserText.setText("please provide a valid date format (eg 2016-30-03)");
+          this.UserText.setStyle("-fx-text-fill: red; -fx-font-size: 16px;");
           return;
         }
         Student newStudent= new Student(firstname,lastname,birthdate,username,password);

@@ -22,7 +22,7 @@
                </font></Label>
             <Button fx:id="NewStudentAddStudent" layoutX="473.0" layoutY="453.0" mnemonicParsing="false" onMouseClicked="#AddNewStudent" prefHeight="59.0" prefWidth="160.0" text="Add Student" />
             <Button fx:id="NewStudentCancelBTN" layoutX="59.0" layoutY="453.0" mnemonicParsing="false" onMouseClicked="#CancelNewStudent" prefHeight="59.0" prefWidth="160.0" text="Cancel" />
-            <Label fx:id="UserText" alignment="CENTER" layoutX="241.0" layoutY="491.0" prefHeight="153.0" prefWidth="205.0" text="A New Student is added" textFill="#1bc68d">
+            <Label fx:id="UserText" alignment="CENTER" layoutX="98.0" layoutY="520.0" prefHeight="153.0" prefWidth="505.0" textFill="#1bc68d">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>

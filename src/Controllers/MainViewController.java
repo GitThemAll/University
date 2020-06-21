@@ -181,6 +181,7 @@ public class MainViewController extends MainController implements Initializable 
                 this.DisplayTeachersBTN.setDisable(false);
                 this.DisplayReportsBTN.setDisable(false);
                 this.SaveReportsBTN.setDisable(false);
+                this.AddStudentBTN.setDisable(false);
                 break;
             case "Teacher":
                 this.AddStudentBTN.setDisable(false);
