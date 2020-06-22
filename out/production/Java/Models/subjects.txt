@@ -1,4 +1,0 @@
-C#
-JAVA
-PHP
-Python
